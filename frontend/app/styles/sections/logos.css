@@ -1,0 +1,31 @@
+/* "Guests at our tables have come from": one row, optically matched heights. */
+
+.afa-logos-band {
+  padding: 44px 0;
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.afa-logos-band .afa-eb {
+  text-align: center;
+}
+
+.afa-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 28px 40px;
+  margin-top: 26px;
+}
+
+.afa-logos img {
+  display: block;
+  width: auto;
+  flex: none;
+}
+
+@media (max-width: 960px) {
+  .afa-logos {
+    justify-content: center;
+  }
+}

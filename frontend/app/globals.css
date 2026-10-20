@@ -1,0 +1,150 @@
+/* ============================================================
+   AFA — Colors, type and layout tokens
+   Source of truth: design-system/tokens/*.css
+   ============================================================ */
+
+/* Inter is loaded (self-hosted, non-render-blocking) via next/font in
+   app/layout.tsx and exposed as --font-inter. */
+
+:root {
+  /* ========== COLOR — Cream and two greens ================== */
+  --afa-cream:         #F1EDE3;
+  --afa-cream-deep:    #E8E3D6;
+  --afa-green:         #14342B;
+  --afa-green-bright:  #2E6B52;
+  --afa-muted:         #5E6B63;
+  --afa-line:          #E0DACE;
+  --afa-on-green:      #F1EDE3;
+  --afa-on-green-soft: #A9C3B5;
+
+  /* Ledger texture (code-filled A mark) */
+  --ledger-ink: var(--afa-green-bright);
+  --ledger-opacity: .2;
+
+  /* ========== SEMANTIC ROLES =============================== */
+  --surface-canvas: var(--afa-cream);
+  --surface-card: var(--afa-cream-deep);
+  --surface-inverse: var(--afa-green);
+  --text-body: var(--afa-green);
+  --text-muted: var(--afa-muted);
+  --text-eyebrow: var(--afa-green-bright);
+  --text-on-inverse: var(--afa-on-green);
+  --text-on-inverse-soft: var(--afa-on-green-soft);
+  --border-hairline: var(--afa-line);
+  --border-inverse: rgba(241, 237, 227, .16);
+  --accent: var(--afa-green);
+  --accent-bright: var(--afa-green-bright);
+  --on-accent: var(--afa-on-green);
+
+  /* ========== TYPOGRAPHY =================================== */
+  --font-sans: var(--font-inter), "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --fs-body: 17px;
+  --ls-body: -.011em;
+  --lh-body: 1.55;
+
+  /* ========== SHAPE ======================================== */
+  --radius-pill: 9999px;
+  --radius-card: 16px;
+  --radius-tile: 14px;
+
+  /* ========== LAYOUT ======================================= */
+  --content-max: 1200px;
+  --gutter: clamp(20px, 4vw, 48px);
+  --section-padding-y: clamp(72px, 12vh, 128px);
+
+  /* ========== MOTION ======================================= */
+  --ease-standard: cubic-bezier(.2, .6, .2, 1);
+  --dur-fast: 120ms;
+  --dur-base: 200ms;
+  --dur-slow: 420ms;
+  --hover-opacity: .86;
+  --press-scale: .985;
+}
+
+/* ========== BASE ========================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  letter-spacing: var(--ls-body);
+  color: var(--text-body);
+  background: var(--surface-canvas);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent-bright);
+}
+
+/* ========== LAYOUT PRIMITIVES ============================= */
+.afa-wrap {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.afa-sec {
+  padding: var(--section-padding-y) 0;
+}
+.afa-sec-rule {
+  border-top: 1px solid var(--border-hairline);
+}
+
+.afa-eb {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--afa-green-bright);
+}
+.afa-eb-soft {
+  color: var(--afa-on-green-soft);
+}
+
+.afa-num {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--afa-green-bright);
+}
+
+.afa-h2 {
+  margin-top: 16px;
+  font-size: clamp(34px, 4.6vw, 56px);
+  font-weight: 600;
+  letter-spacing: -.035em;
+  line-height: 1.02;
+  color: var(--afa-green);
+}
+
+.afa-lede {
+  margin-top: 16px;
+  font-size: 18px;
+  color: var(--text-muted);
+  max-width: 44ch;
+}

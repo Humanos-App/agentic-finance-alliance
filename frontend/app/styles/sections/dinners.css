@@ -1,0 +1,74 @@
+/* Dinners: Next (deep green) and Previously (cream deep). */
+
+.afa-dinners {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.afa-dinner {
+  position: relative;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: var(--afa-cream-deep);
+  display: flex;
+  flex-direction: column;
+}
+.afa-dinner img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+.afa-dinner h3 {
+  color: var(--afa-green);
+}
+
+.afa-dinner-txt {
+  padding: 26px 28px 30px;
+}
+.afa-dinner-txt h3 {
+  margin-top: 10px;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -.04em;
+  line-height: 1;
+}
+.afa-dinner-txt p {
+  margin: 10px 0 0;
+  font-size: 16px;
+  color: var(--text-muted);
+}
+
+.afa-tag {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--afa-green-bright);
+}
+
+.afa-dinner.is-next {
+  background: var(--afa-green);
+  color: var(--afa-cream);
+}
+.afa-dinner.is-next img {
+  object-position: 50% 0;
+}
+.afa-dinner.is-next h3 {
+  color: var(--afa-cream);
+}
+.afa-dinner.is-next .afa-dinner-txt p {
+  color: var(--afa-on-green-soft);
+  margin-bottom: 22px;
+}
+.afa-dinner.is-next .afa-tag {
+  color: var(--afa-on-green-soft);
+}
+
+@media (max-width: 640px) {
+  .afa-dinners {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

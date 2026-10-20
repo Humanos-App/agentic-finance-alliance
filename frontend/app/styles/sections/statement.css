@@ -1,0 +1,49 @@
+/* The two-line statement over the ledger A. The section is tall enough for
+   all 75 ledger lines at the current ledger font size. */
+
+.afa-punch {
+  position: relative;
+  overflow: hidden;
+  min-height: calc(75 * clamp(6px, 0.85vw, 11px) + 80px);
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+  border-top: 1px solid var(--border-hairline);
+  text-align: center;
+}
+.afa-punch > .afa-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.afa-punch h2 {
+  font-size: clamp(18px, 3.9vw, 52px);
+  font-weight: 600;
+  letter-spacing: -.04em;
+  line-height: 1.04;
+  color: var(--afa-green);
+}
+
+.afa-punch-l {
+  display: block;
+  white-space: nowrap;
+}
+.afa-punch-l + .afa-punch-l {
+  margin-top: .55em;
+}
+
+.afa-ledger {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: clamp(6px, 0.85vw, 11px);
+  line-height: 1;
+  white-space: pre;
+  color: var(--ledger-ink);
+  opacity: var(--ledger-opacity);
+  pointer-events: none;
+  user-select: none;
+}

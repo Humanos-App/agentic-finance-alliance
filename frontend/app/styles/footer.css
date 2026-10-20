@@ -1,0 +1,38 @@
+.afa-footer {
+  background: var(--afa-green);
+  color: var(--afa-cream);
+  border-top: 1px solid var(--border-inverse);
+  padding: 40px 0;
+}
+
+.afa-footer-in {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.afa-footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  letter-spacing: -.02em;
+}
+
+.afa-footer-links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.afa-footer a {
+  color: var(--afa-cream);
+  opacity: .78;
+}
+.afa-footer a:hover {
+  opacity: 1;
+  color: var(--afa-cream);
+}

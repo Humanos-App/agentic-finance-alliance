@@ -1,0 +1,50 @@
+/* Who sits at the table: four columns split by hairlines. */
+
+.afa-who {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--border-hairline);
+}
+.afa-who > div {
+  padding: 28px 22px 0 0;
+}
+.afa-who > div + div {
+  border-left: 1px solid var(--border-hairline);
+  padding-left: 22px;
+}
+.afa-who h3 {
+  font-size: clamp(26px, 2.8vw, 36px);
+  font-weight: 600;
+  letter-spacing: -.03em;
+  color: var(--afa-green);
+}
+.afa-who p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 960px) {
+  .afa-who {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .afa-who > div:nth-child(3) {
+    border-left: 0;
+    padding-left: 0;
+  }
+  .afa-who > div {
+    padding-bottom: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .afa-who {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .afa-who > div + div {
+    border-left: 0;
+    padding-left: 0;
+    border-top: 1px solid var(--border-hairline);
+  }
+}

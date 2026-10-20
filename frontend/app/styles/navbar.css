@@ -1,0 +1,69 @@
+/* Fixed nav: cream text over the hero, solid cream once the hero scrolls away. */
+
+.afa-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  color: var(--afa-cream);
+  border-bottom: 1px solid transparent;
+  transition:
+    background var(--dur-slow) var(--ease-standard),
+    border-color var(--dur-slow) var(--ease-standard);
+}
+.afa-nav.is-solid {
+  background: var(--afa-cream);
+  color: var(--afa-green);
+  border-bottom-color: var(--border-hairline);
+}
+
+.afa-nav-in {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  height: 72px;
+}
+
+.afa-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: inherit;
+  font-weight: 600;
+  letter-spacing: -.02em;
+}
+.afa-brand:hover {
+  color: inherit;
+}
+
+.afa-links {
+  display: flex;
+  gap: 28px;
+  margin-left: auto;
+  font-size: 15px;
+  font-weight: 500;
+}
+.afa-links a {
+  color: inherit;
+  opacity: .85;
+}
+.afa-links a:hover {
+  opacity: 1;
+  color: inherit;
+}
+
+@media (max-width: 960px) {
+  .afa-links {
+    display: none;
+  }
+  .afa-nav-in {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 640px) {
+  .afa-brand span {
+    display: none;
+  }
+}

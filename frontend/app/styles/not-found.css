@@ -1,0 +1,14 @@
+.afa-not-found {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+}
+.afa-not-found .afa-wrap {
+  width: 100%;
+}
+.afa-not-found p {
+  margin: 18px 0 34px;
+  font-size: 18px;
+  color: var(--afa-on-green-soft);
+}

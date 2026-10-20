@@ -1,0 +1,43 @@
+/* Lisbon, in pictures: 3:4 portraits, every other column dropped. */
+
+.afa-gallery-h {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.afa-gallery-h .afa-lede {
+  margin: 0;
+}
+
+.afa-gallery {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+.afa-gallery img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius-tile);
+  background: var(--afa-cream-deep);
+}
+.afa-gallery img:nth-child(4n + 2),
+.afa-gallery img:nth-child(4n + 4) {
+  margin-top: 36px;
+}
+
+@media (max-width: 960px) {
+  .afa-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .afa-gallery img:nth-child(n) {
+    margin-top: 0;
+  }
+  .afa-gallery img:nth-child(2n) {
+    margin-top: 28px;
+  }
+}

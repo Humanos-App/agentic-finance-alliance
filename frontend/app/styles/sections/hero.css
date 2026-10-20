@@ -1,0 +1,56 @@
+/* Full-bleed after movie behind the title, under a flat 62% deep green tint. */
+
+.afa-hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: var(--afa-green);
+  color: var(--afa-cream);
+}
+
+.afa-hero-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.afa-hero-tint {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 52, 43, .62);
+}
+
+.afa-hero-in {
+  position: relative;
+  width: 100%;
+  padding-top: 140px;
+  padding-bottom: clamp(56px, 10vh, 110px);
+}
+
+.afa-h1 {
+  margin-top: 0;
+  max-width: 13ch;
+  font-size: clamp(52px, 8.4vw, 124px);
+  font-weight: 600;
+  line-height: .96;
+  letter-spacing: -.045em;
+}
+
+.afa-hero-sub {
+  margin-top: 22px;
+  max-width: 52ch;
+  font-size: clamp(17px, 1.6vw, 20px);
+  opacity: .88;
+}
+
+.afa-hero-ctas {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 34px;
+}

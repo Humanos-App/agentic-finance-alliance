@@ -1,0 +1,17 @@
+<!-- @dsCard group="Components" viewport="700x620" name="Content" subtitle="Point grid, logo strip, dinner cards" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script><style>body{margin:0;background:#F1EDE3;color:#14342B;font-family:var(--font-sans);padding:20px 24px}#root{display:flex;flex-direction:column;gap:28px}</style></head><body><div id="root"></div>
+<script type="text/babel">
+const { PointGrid, LogoStrip, DinnerCard, Button } = window.AFADesignSystem_93293e;
+ReactDOM.createRoot(document.getElementById('root')).render(<>
+  <PointGrid items={[{title:'The experience',text:'Curated and hosted in exceptional venues, so every guest has a memorable evening.'},{title:'The people',text:'Our in-house matchmaking system seats every guest among the brightest minds.'},{title:'Worth your time',text:'Less noise, more signal.'}]} />
+  <LogoStrip assetBase="../../assets/logos" logos={[{src:'mastercard-full.png',alt:'Mastercard',height:24},{src:'anchorage.png',alt:'Anchorage Digital',height:19},{src:'anthemis.png',alt:'Anthemis',height:12},{src:'crossmint.png',alt:'Crossmint',height:11},{src:'sponsor-wordmark.svg',alt:'Humanos',height:14},{src:'vest-markets.png',alt:'Vest Markets',height:19},{src:'temerity.png',alt:'Temerity',height:28}]} />
+  <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:14}}>
+    <DinnerCard next tag="Next" city="London" meta="3 December · Private dinner" image="../../assets/cover-ledger-london.png" imagePosition="50% 0" style={{maxHeight:300}} action={<Button variant="cream">Get your seat at the next dinner.</Button>} />
+    <DinnerCard tag="Previously" city="Lisbon" meta="21 September at Capítulo Restaurant & Bar." image="../../assets/lisbon/dsc06856.jpg" imagePosition="50% 62%" style={{maxHeight:300}} />
+  </div>
+</>);
+</script></body></html>

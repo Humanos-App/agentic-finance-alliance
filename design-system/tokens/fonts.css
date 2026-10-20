@@ -1,0 +1,4 @@
+/* Inter 400/500/600/700 — the AFA type family.
+   The source brand file embedded Inter as base64 woff2; here it is served from
+   Google Fonts (same family, same weights). Swap for self-hosted files if needed. */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");

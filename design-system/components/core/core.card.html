@@ -1,0 +1,19 @@
+<!-- @dsCard group="Components" viewport="700x300" name="Core" subtitle="Buttons, eyebrow, cards, as on the website" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script><style>body{margin:0;background:#F1EDE3;color:#14342B;font-family:var(--font-sans);padding:20px 24px}#root{display:flex;flex-direction:column;gap:16px}</style></head><body><div id="root"></div>
+<script type="text/babel">
+const { Button, Eyebrow, Card } = window.AFADesignSystem_93293e;
+const Row=({children,dark})=><div style={{display:'flex',gap:12,alignItems:'center',flexWrap:'wrap',padding:dark?'16px':0,borderRadius:16,background:dark?'#14342B':'transparent'}}>{children}</div>;
+ReactDOM.createRoot(document.getElementById('root')).render(<>
+  <Eyebrow>Why Join</Eyebrow>
+  <Row><Button variant="fill">Get your seat at the next dinner.</Button><Button variant="ghost">Partners</Button><Button variant="fill" disabled>Sold out.</Button></Row>
+  <Row dark><Button variant="cream" size="lg">Become a partner for the next dinner.</Button><Button variant="line">Send another</Button></Row>
+  <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:14}}>
+    <Card tone="surface"><span style={{fontFamily:'var(--font-mono)',fontSize:13,color:'#2E6B52'}}>01</span><b style={{display:'block',marginTop:8,fontSize:19,letterSpacing:'-.015em'}}>Priority intros</b><div style={{marginTop:6,fontSize:15,color:'#5E6B63'}}>First calls and intros with the guests.</div></Card>
+    <Card tone="inverse"><Eyebrow tone="soft">Partner with us</Eyebrow><b style={{display:'block',marginTop:10,fontSize:22,letterSpacing:'-.03em'}}>Become a partner for the next dinner.</b></Card>
+  </div>
+</>);
+</script></body></html>

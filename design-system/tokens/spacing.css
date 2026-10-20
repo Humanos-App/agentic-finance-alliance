@@ -1,0 +1,20 @@
+:root{
+  --space-1:4px;
+  --space-2:8px;   /* rhythm base */
+  --space-3:12px;
+  --space-4:16px;
+  --space-5:20px;
+  --space-6:24px;
+  --space-8:32px;
+  --space-10:40px;
+  --space-12:48px;
+  --space-16:64px;
+  --space-19:76px;
+  --space-24:96px;
+
+  --section-rhythm:clamp(72px,12vh,128px); /* @kind spacing */
+  --section-padding-y:clamp(72px,12vh,128px); /* @kind spacing */
+  --content-max:1200px;
+  --gutter:clamp(20px,4vw,48px); /* @kind spacing */
+  --measure:64ch; /* @kind spacing */
+}

@@ -1,0 +1,226 @@
+<!-- @dsCard group="Website" viewport="1280x760" name="AFA website" subtitle="The live site: hero video, why join, dinners, partners" -->
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agentic Finance Alliance · Private dinners at the frontier of AI and finance</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;overflow-x:hidden;background:var(--afa-cream)}
+h1,h2,h3,p{margin:0;text-wrap:pretty}
+a{color:var(--afa-green);text-decoration:none}a:hover{color:var(--afa-green-bright)}
+.v2-wrap{max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+.v2-eb{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--afa-green-bright)}
+.v2-eb-soft{color:var(--afa-on-green-soft)}
+.v2-num{font-family:var(--font-mono);font-size:13px;color:var(--afa-green-bright)}
+.v2-h2{margin-top:16px;font-size:clamp(34px,4.6vw,56px);font-weight:600;letter-spacing:-.035em;line-height:1.02;color:var(--afa-green)}
+.v2-lede{margin-top:16px;font-size:18px;color:var(--text-muted);max-width:44ch}
+.v2-sec{padding:clamp(72px,12vh,128px) 0}
+.v2-sec-rule{border-top:1px solid var(--border-hairline)}
+/* buttons */
+.v2-btn{display:inline-flex;align-items:center;font:inherit;font-size:15px;font-weight:500;letter-spacing:-.01em;padding:12px 24px;border-radius:9999px;border:1.5px solid transparent;cursor:pointer;white-space:nowrap;transition:opacity var(--dur-base) var(--ease-standard),background var(--dur-base) var(--ease-standard)}
+.v2-btn:hover{opacity:var(--hover-opacity)}.v2-btn:active{transform:scale(var(--press-scale))}
+.v2-btn:disabled{opacity:.4;pointer-events:none}
+.v2-btn-lg{font-size:16px;padding:14px 28px}
+.v2-btn-cream{background:var(--afa-cream);color:var(--afa-green)}.v2-btn-cream:hover{color:var(--afa-green)}
+.v2-btn-green{background:var(--afa-green);color:var(--afa-cream)}.v2-btn-green:hover{color:var(--afa-cream)}
+.v2-btn-line{background:transparent;border-color:rgba(241,237,227,.6);color:var(--afa-cream)}.v2-btn-line:hover{color:var(--afa-cream)}
+/* nav */
+.v2-nav{position:fixed;top:0;left:0;right:0;z-index:30;color:var(--afa-cream);transition:background var(--dur-slow) var(--ease-standard),border-color var(--dur-slow) var(--ease-standard);border-bottom:1px solid transparent}
+.v2-nav.is-solid{background:var(--afa-cream);color:var(--afa-green);border-bottom-color:var(--border-hairline)}
+.v2-nav-in{display:flex;align-items:center;gap:28px;height:72px}
+.v2-brand{display:flex;align-items:center;gap:12px;color:inherit;font-weight:600;letter-spacing:-.02em}.v2-brand:hover{color:inherit}
+.v2-links{display:flex;gap:28px;margin-left:auto;font-size:15px;font-weight:500}
+.v2-links a{color:inherit;opacity:.85}.v2-links a:hover{opacity:1;color:inherit}
+/* hero */
+.v2-hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;background:var(--afa-green);color:var(--afa-cream)}
+.v2-hero-media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.v2-hero-tint{position:absolute;inset:0;background:rgba(20,52,43,.62)}
+.v2-hero-in{position:relative;width:100%;padding-top:140px;padding-bottom:clamp(56px,10vh,110px)}
+.v2-h1{margin-top:0;max-width:13ch;font-size:clamp(52px,8.4vw,124px);font-weight:600;line-height:.96;letter-spacing:-.045em}
+.v2-hero-sub{margin-top:22px;max-width:52ch;font-size:clamp(17px,1.6vw,20px);opacity:.88}
+/* logos */
+.v2-logos-band{padding:44px 0;border-bottom:1px solid var(--border-hairline)}
+.v2-logos{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:28px 40px;margin-top:26px}
+.v2-logos img{display:block;width:auto;flex:none}
+/* about */
+.v2-about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,3fr);gap:32px}
+.v2-statement{font-size:clamp(26px,3.4vw,44px);font-weight:600;letter-spacing:-.03em;line-height:1.12;color:var(--afa-green)}
+.v2-statement{max-width:22ch}
+.v2-about-pts{margin-top:40px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--border-hairline)}
+.v2-about-pts>div{padding:20px 20px 0 0}
+.v2-about-pts>div+div{border-left:1px solid var(--border-hairline);padding-left:20px}
+.v2-about-pts b{display:block;font-size:18px;font-weight:600;letter-spacing:-.015em;color:var(--afa-green)}
+.v2-about-pts p{margin-top:6px;font-size:16px;color:var(--text-muted)}
+@media (max-width:640px){.v2-about-pts{grid-template-columns:minmax(0,1fr)}.v2-about-pts>div+div{border-left:0;padding-left:0;border-top:1px solid var(--border-hairline)}.v2-about-pts>div{padding-bottom:16px}}
+.v2-punch{position:relative;overflow:hidden;min-height:calc(75 * clamp(6px,0.85vw,11px) + 80px);display:flex;align-items:center;padding:40px 0;border-top:1px solid var(--border-hairline);text-align:center}.v2-punch>.v2-wrap{width:100%}
+.v2-punch-l{display:block;white-space:nowrap}.v2-punch-l+.v2-punch-l{margin-top:.55em}
+.v2-punch h2{font-size:clamp(18px,3.9vw,52px);font-weight:600;letter-spacing:-.04em;line-height:1.04;color:var(--afa-green)}
+.v2-ledger{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);margin:0;font-family:var(--font-mono);font-size:clamp(6px,0.85vw,11px);line-height:1;white-space:pre;color:var(--ledger-ink);opacity:.2;pointer-events:none;user-select:none}
+/* how */
+.v2-steps{margin-top:56px;display:flex;flex-direction:column;gap:clamp(48px,8vh,88px)}
+.v2-step{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center}
+.v2-step.is-flip .v2-step-media{order:2}
+.v2-step-media{aspect-ratio:4/3;border-radius:var(--radius-card);overflow:hidden;background:var(--afa-cream-deep)}
+.v2-step-media img{width:100%;height:100%;object-fit:cover;display:block}
+.v2-step-media:has(.v2-match){aspect-ratio:auto}
+.v2-step-txt h3{margin-top:10px;font-size:clamp(26px,3vw,36px);font-weight:600;letter-spacing:-.03em;color:var(--afa-green)}
+.v2-step-txt p{margin-top:14px;font-size:18px;color:var(--text-muted);max-width:42ch}
+.v2-match{height:100%;background:var(--afa-green);color:var(--afa-cream);padding:clamp(22px,3vw,36px);display:flex;flex-direction:column;justify-content:center;gap:0}
+.v2-match-h{display:flex;justify-content:space-between;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--afa-on-green-soft);padding-bottom:14px;border-bottom:1px solid var(--border-inverse)}
+.v2-match-r{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1.2fr) auto;gap:14px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--border-inverse);font-size:14px}
+.v2-match-r code{font-family:var(--font-mono);font-size:13px;color:var(--afa-on-green-soft)}
+.v2-match-r b{font-weight:600;font-size:13px}
+/* who */
+.v2-who{margin-top:28px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--border-hairline)}
+.v2-who>div{padding:28px 22px 0 0}
+.v2-who>div+div{border-left:1px solid var(--border-hairline);padding-left:22px}
+.v2-who h3{font-size:clamp(26px,2.8vw,36px);font-weight:600;letter-spacing:-.03em;color:var(--afa-green)}
+.v2-who p{margin-top:10px;font-size:16px;color:var(--text-muted)}
+/* gallery */
+.v2-gallery-h{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.v2-gallery{margin-top:40px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.v2-gallery img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;border-radius:14px;background:var(--afa-cream-deep)}
+.v2-gallery img:nth-child(4n+2),.v2-gallery img:nth-child(4n+4){margin-top:36px}
+/* dinners */
+.v2-dinners{margin-top:24px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.v2-dinner{position:relative;border-radius:var(--radius-card);overflow:hidden;background:var(--afa-cream-deep);display:flex;flex-direction:column}
+.v2-dinner img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.v2-dinner.is-next img{object-position:50% 0}
+.v2-dinner-txt{padding:26px 28px 30px}
+.v2-dinner.is-next{background:var(--afa-green);color:var(--afa-cream)}
+.v2-dinner-txt h3{margin-top:10px;font-size:40px;font-weight:600;letter-spacing:-.04em;line-height:1}
+.v2-dinner-txt p{margin:10px 0 0;font-size:16px;color:var(--text-muted)}
+.v2-dinner.is-next .v2-dinner-txt p{color:var(--afa-on-green-soft);margin-bottom:22px}
+.v2-dinner.is-next h3{color:var(--afa-cream)}
+.v2-dinner h3{color:var(--afa-green)}
+.v2-tag{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--afa-green-bright)}
+.v2-dinner.is-next .v2-tag{color:var(--afa-on-green-soft)}
+/* partners */
+.v2-partners{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(32px,6vw,80px);align-items:start}
+.v2-contact{margin-top:32px;display:flex;flex-direction:column;gap:4px;font-size:16px}
+.v2-contact b{font-weight:600;font-size:17px}.v2-contact span{color:var(--text-muted);margin-bottom:8px}
+.v2-get{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.v2-get>div{background:var(--afa-cream-deep);border-radius:var(--radius-card);padding:24px 26px}
+.v2-get b{display:block;margin-top:10px;font-size:19px;font-weight:600;letter-spacing:-.015em;color:var(--afa-green)}
+.v2-get p{margin-top:6px;font-size:15px;color:var(--text-muted)}
+/* apply */
+.v2-apply{background:var(--afa-green);color:var(--afa-cream);padding:clamp(80px,13vh,140px) 0}
+.v2-apply-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,80px);align-items:start}
+.v2-apply h2{margin-top:16px;font-size:clamp(32px,4.2vw,52px);font-weight:600;letter-spacing:-.035em;line-height:1.04}
+.v2-apply-in>div>p{margin-top:18px;font-size:18px;color:var(--afa-on-green-soft);max-width:44ch}
+.v2-form{display:flex;flex-direction:column;gap:12px}
+.v2-form input,.v2-form textarea{font:inherit;font-size:16px;padding:14px 20px;border-radius:9999px;border:1px solid var(--border-inverse);background:rgba(241,237,227,.06);color:var(--afa-cream);outline:none}
+.v2-form textarea{border-radius:var(--radius-card);min-height:110px;resize:vertical}
+.v2-form input:focus,.v2-form textarea:focus{border-color:var(--afa-on-green-soft)}
+.v2-form ::placeholder{color:var(--afa-on-green-soft);opacity:.85}
+.v2-form>.v2-btn{align-self:flex-start;margin-top:6px}
+.v2-roles{display:flex;gap:8px;flex-wrap:wrap}
+.v2-roles button{font:inherit;font-size:15px;padding:10px 18px;border-radius:9999px;border:1px solid var(--border-inverse);background:transparent;color:var(--afa-cream);cursor:pointer}
+.v2-roles button.is-on{background:var(--afa-cream);color:var(--afa-green);border-color:var(--afa-cream)}
+.v2-sent{background:rgba(241,237,227,.06);border:1px solid var(--border-inverse);border-radius:var(--radius-card);padding:30px 32px}
+.v2-sent b{font-size:24px;font-weight:600;letter-spacing:-.02em}
+.v2-sent p{color:var(--afa-on-green-soft);margin:4px 0 18px}
+/* footer */
+.v2-footer{background:var(--afa-green);color:var(--afa-cream);border-top:1px solid var(--border-inverse);padding:40px 0}
+.v2-footer-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.v2-footer-links{display:flex;gap:24px;flex-wrap:wrap;font-size:14px}
+.v2-footer a{color:var(--afa-cream);opacity:.78}.v2-footer a:hover{opacity:1;color:var(--afa-cream)}
+@media (max-width:960px){.v2-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.v2-gallery img:nth-child(n){margin-top:0}.v2-gallery img:nth-child(2n){margin-top:28px}.v2-links{display:none}.v2-nav-in{justify-content:space-between}.v2-about,.v2-step,.v2-partners,.v2-apply-in{grid-template-columns:minmax(0,1fr)}.v2-step.is-flip .v2-step-media{order:0}.v2-who{grid-template-columns:repeat(2,minmax(0,1fr))}.v2-who>div:nth-child(3){border-left:0;padding-left:0}.v2-who>div{padding-bottom:24px}.v2-logos{justify-content:center}}
+@media (max-width:640px){.v2-brand span{display:none}.v2-dinners,.v2-get{grid-template-columns:minmax(0,1fr)}.v2-who{grid-template-columns:minmax(0,1fr)}.v2-who>div+div{border-left:0;padding-left:0;border-top:1px solid var(--border-hairline)}.v2-match-r{grid-template-columns:minmax(0,1fr) auto}.v2-match-r span{display:none}}</style>
+</head><body>
+<template id="ledger-src">
+
+
+
+
+                                         0tx:0x6840 approved · tx:0x997d app1.
+                                          0roved · pending · agent_05=&gt;agent_110.
+                                           1 · 0xc867110 · 0xe801e · 0x6c6a995 · E.
+                                            1TH · €2550.03 · block · $2467.82 · con1
+                                             0firmed · pending · confirmed · =&gt; · se0
+                                              0ttled · tx:0xcb8d approved · €260.18 ·1
+                                               0 0x0e5df7e · settled · block · €508.071
+                                                0 · 0x385c91 · 0x7c47f · tx:0xc755 decl1
+                                                 1ined · $9098.09 · tx:0x8959 approved ·1
+                                                  0 $3707.99 · settled · EUR · 0x879fc6 ·1
+                                                    €2456.99 · agent_17=&gt;agent_03 · block 0
+                                                    0· EUR · agent_12=&gt;agent_17 · EUR · set.
+                                                     1tled · sig:ok · pending · agent_20=&gt;ag.
+                                                      0ent_11 · €1179.73 · $7482.10 · 0x696ff1
+                                                       1 · sig:ok · pending · fee:1.27 · pendi1
+                                                        0ng · confirmed · block · tx:0xfd2b app.
+                                                         1roved · 0x5d68421 · pending · block · .
+                                                          $2352.05 · $772.65 · €2311.35 · 0xe7835.
+                                                            · sig:ok · =&gt; · agent_21=&gt;agent_07 · t.
+                                                            x:0xc86d approved · block · 0x00cb5 · c.
+                                                            .onfirmed · settled · confirmed · sig:ok.
+                                                             . · agent_08=&gt;agent_02 · tx:0xe97e decli
+                                                               ned · EUR · EUR · pending · {tx} · bloc
+                         .10k · settled · 0x4699d2 · tx:0xd1    0a approved · sig:ok · =&gt; · $518.59 · a
+                      .0gent_01=&gt;agent_08 · 0xc351b8 · tx:0.    .xb892 approved · agent_18=&gt;agent_04 · p.
+                    1ending · pending · =&gt; · tx:0x228e app1      .roved · block · tx:0x4fe6 approved · pe
+                   1nding · fee:0.90 · 0xc9b9969e · tx:0x0        .3eb7 declined · block · tx:0x154c appro
+                  ved · 0x24a6f · 0x8b44064c · tx:0x65e10          . approved · fee:1.50 · pending · tx:0x2
+                 1027 approved · 0xffd6256 · 0x8c236fd1             .· agent_15=&gt;agent_17 · confirmed · fee1
+                1:0.33 · =&gt; · 0x2f4a95b · 0xbaa44 · ETH              . · $7466.81 · 822.12USDC · ETH · =&gt; · 0
+               0ETH · sig:ok · settled · confirmed · c.               .onfirmed · 0x614ad992 · tx:0xceec appr1
+              0oved · fee:0.77 · settled · fee:0.74 ·                  . settled · 0x4b737a6d · $985.93 · tx:01
+             .x8250 declined · tx:0xa13d approved ·                     .fee:0.27 · agent_01=&gt;agent_10 · confir1
+            .med · 2214.15USDC · sig:ok · 0x7c941 ·                      . sig:ok · block · confirmed · tx:0xd9d1
+           .1 declined · block · €4392.74 · $2492..                       .05 · agent_03=&gt;agent_23 · 0x56738ebd ·.
+          1 $8891.44 · $7874.60 · tx:0xcd95 appro.                         .ved · agent_08=&gt;agent_02 · tx:0x4c42 a0
+         .pproved · 6931.93USDC · 0xbbf3b978 · t.                           .x:0xf8a6 approved · =&gt; · tx:0xb013 app0
+        .roved · tx:0x5b95 approved · tx:0xcc73.                             . approved · pending · tx:0xb59e approv1
+       .ed · $3161.90 · settled · agent_14=&gt;ag.                               .ent_23 · tx:0x6fbc declined · $8089.75.
+      . · tx:0xabe9 declined · EUR · 0xe8ebe .                                 .· 0x1866f832 · tx:0xb7d9 approved · bl.
+      ock · $7106.56 · $8202.63 · tx:0xdaf4 .                                   1approved · 0x43153 · confirmed · tx:0x.
+     5628 approved · tx:0x78db approved · t0                                     1x:0x05ca declined · settled · sig:ok ·.
+     tx:0x8cc3 approved · {tx} · $1877.03 0                                       0· block · tx:0x3968 declined · sig:ok
+   · tx:0x2ae2 approved · agent_08=&gt;agent.                                         ._17 · pending · {tx} · 0xc6ead9 · tx:0
+  0x0794 approved · EUR · $7171.60 · tx:1                                           .0x2aa6 declined · €4150.51 · settled ·
+ 0 $6996.75 · sig:ok · 0x16ba2bbe · tx:0                                             10xb70d declined · 0xa19a534c · $927.53.
+ · settled · $2065.26 · settled · 0x8f1                                               1b3b · tx:0x39ac declined · fee:1.60 ·
+sig:ok · agent_24=&gt;agent_08 · 0x77ae51     .c4d · 0x5707e · $4873.84 · $4450.11.       15 · 0x327f7cce · $3830.89 · agent_13=
+&gt;agent_21 · agent_15=&gt;agent_06 · tx:1       .0xbdd6 approved · agent_24=&gt;agent_17.       · =&gt; · settled · $5953.23 · {tx} · t
+x:0xcee1 declined · settled · tx:0xd         .918 declined · confirmed · 0x544ea8 ·0      fee:1.08 · €3102.69 · tx:0xba02 app
+roved · settled · $6759.16 · 0x7a7b           1523 · tx:0xe064 declined · tx:0x5296 0    .declined · 0x068943 · tx:0xcc04 dec
+lined · agent_11=&gt;agent_24 · tx:0x             115eb declined · agent_04=&gt;agent_16 · 0    .$7448.38 · 0xbea68b3 · =&gt; · agent_
+11=&gt;agent_01 · tx:0x5a08 approved               0 · 0xb1a83 · agent_10=&gt;agent_03 · $171    .23.05 · fee:1.33 · sig:ok · =&gt; ·
+tx:0x9fda approved · tx:0x4c9e a.                1pproved · {tx} · settled · tx:0x2f21 1    .approved · tx:0x2ff8 declined ·
+tx:0x91bc approved · $3560.89 ·                   0 0xcea88654 · block · €3360.07 · sett1    .led · tx:0x7465 approved · {tx}
+ · tx:0x3387 approved · tx:0xe                     4af approved · agent_20=&gt;agent_19 · pe1    .nding · EUR · sig:ok · $4050.1
+2 · agent_23=&gt;agent_23 · 0xc5                       19233e8 · tx:0x063a declined · 0xfcf96.    . · tx:0x10c2 approved · tx:0x
+fea5 declined · tx:0xd2d6 ap.                        0proved · pending · pending · tx:0x107.    .2 approved · 1228.62USDC · p
+ending · tx:0xa3fe approved.                          1 · tx:0x0ea4 approved · confirmed · 0.    .x68bda · 0x9b061363 · tx:0x
+c13a declined · settled · .                            0x76f6377 · 0x30467 · 0xac40a50d · blo.    .ck · settled · pending · p
+ending · ETH · pending · .                              $1607.47 · tx:0x6e55 approved · =&gt; · {.    .tx} · $6448.35 · €7013.96
+ · sig:ok · 0x6bbe3 · se.                                ttled · settled · tx:0x8d66 approved ·.    0 settled · block · settl
+ed · $4676.39 · confirm.                                  ed · agent_14=&gt;agent_09 · tx:0x7fd5 ap.    0proved · $6690.17 · blo
+ck · agent_13=&gt;agent_1.                                   .5 · sig:ok · tx:0xff00 approved · $529.    13.81 · confirmed · age
+nt_20=&gt;agent_05 · ET0                                       1H · €4251.04 · tx:0xb996 approved · t.    .x:0xa513 approved · a
+gent_11=&gt;agent_19 ·.                                         .0 tx:0x41ee approved · agent_22=&gt;agen.     .t_14 · {tx} · sig:o
+k · tx:0xc96a ap1.                                              01proved · 0xcf0366 · block · fee:1.       .028 · EUR · $2237
+1111000001101.                                                      01100110111110101101101000101101.          .0000011001101
+
+</template>
+<div id="root"></div>
+<script type="text/babel" src="nav.jsx"></script>
+<script type="text/babel" src="hero.jsx"></script>
+<script type="text/babel" src="table.jsx"></script>
+<script type="text/babel" src="about.jsx"></script>
+<script type="text/babel" src="how.jsx"></script>
+<script type="text/babel" src="who.jsx"></script>
+<script type="text/babel" src="gallery.jsx"></script>
+<script type="text/babel" src="dinners.jsx"></script>
+<script type="text/babel" src="partners.jsx"></script>
+<script type="text/babel" src="apply.jsx"></script>
+<script type="text/babel" src="footer.jsx"></script>
+<script type="text/babel">
+function Site(){
+  const apply=()=>{const el=document.getElementById('apply');if(el)window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-72,behavior:'smooth'});};
+  return (<><Nav onApply={apply}/><Hero onApply={apply}/><AtTheTable/><About/><How/><Who/><Gallery/><Partners/><Apply/><Dinners/><Footer/></>);
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Site/>);
+</script>
+</body></html>

@@ -1,0 +1,38 @@
+:root{
+  /* ---- Palette A · Cream & two greens (primary) ----
+     Aligned to the London ledger cover: cream ground, deep green for type
+     and fills, bright green for accents and the ledger texture. */
+  --afa-cream:#F1EDE3;
+  --afa-cream-deep:#E8E3D6;
+  --afa-green:#14342B;
+  --afa-green-bright:#2E6B52;
+  --afa-muted:#5E6B63;
+  --afa-line:#E0DACE;
+  --afa-on-green:#F1EDE3;
+  --afa-on-green-soft:#A9C3B5;
+
+  /* legacy names, kept so nothing breaks */
+  --afa-canvas:var(--afa-cream);
+  --afa-surface:var(--afa-cream-deep);
+  --afa-ink:var(--afa-green);
+  --afa-night:var(--afa-green);
+
+  /* ledger texture (code-filled A mark) */
+  --ledger-ink:var(--afa-green-bright);
+  --ledger-opacity:.2; /* @kind other */
+
+  /* ---- Semantic aliases  ---- */
+  --surface-canvas:var(--afa-canvas);
+  --surface-card:var(--afa-surface);
+  --surface-inverse:var(--afa-night);
+  --text-body:var(--afa-ink);
+  --text-muted:var(--afa-muted);
+  --text-eyebrow:var(--afa-green-bright);
+  --text-on-inverse:var(--afa-on-green);
+  --border-hairline:var(--afa-line);
+  --border-inverse:rgba(241,237,227,.16);
+  --text-on-inverse-soft:var(--afa-on-green-soft);
+  --accent:var(--afa-green);
+  --accent-bright:var(--afa-green-bright);
+  --on-accent:var(--afa-on-green);
+}

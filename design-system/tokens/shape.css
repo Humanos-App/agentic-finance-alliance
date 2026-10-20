@@ -1,0 +1,13 @@
+:root{
+  --radius-pill:9999px;
+  --radius-card:16px;
+  --radius-tile:14px;
+  --radius-swatch:12px;
+
+  --border-hairline-width:1px;
+  --border-ghost-width:1.5px;
+
+  /* The brand uses hairline rules and flat warm surfaces — not shadow. */
+  --shadow-none:none; /* @kind shadow */
+  --shadow-lift:0 1px 2px rgba(20,35,28,.04);
+}
